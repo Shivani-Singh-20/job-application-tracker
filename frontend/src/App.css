@@ -1,0 +1,451 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #111827;
+  color: #f9fafb;
+  min-height: 100vh;
+}
+
+/* ── Page layout ── */
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1rem;
+  gap: 1.5rem;
+  min-height: 100vh;
+}
+
+/* ── Header ── */
+.header {
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #f9fafb;
+  letter-spacing: -0.5px;
+}
+
+.header p {
+  font-size: 14px;
+  color: #9ca3af;
+  margin-top: 4px;
+}
+
+/* ── Card ── */
+.form-card {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 14px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 480px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #f9fafb;
+  margin-bottom: 1.5rem;
+}
+
+/* ── Fields ── */
+.field {
+  margin-bottom: 1.1rem;
+}
+
+.field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #9ca3af;
+  margin-bottom: 6px;
+  letter-spacing: 0.2px;
+}
+
+.field input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  background: #111827;
+  color: #f9fafb;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.field input:focus {
+  border-color: #378ADD;
+  box-shadow: 0 0 0 3px rgba(55, 138, 221, 0.15);
+}
+
+.field input::placeholder {
+  color: #4b5563;
+}
+
+/* ── Status pills ── */
+.status-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.pill {
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  background: transparent;
+  transition: all 0.15s;
+}
+
+.pill-applied        { color: #93c5fd; border-color: #1e3a5f; }
+.pill-applied.active { background: #378ADD; color: #fff; border-color: #378ADD; }
+
+.pill-interview        { color: #fcd34d; border-color: #4a3000; }
+.pill-interview.active { background: #BA7517; color: #fff; border-color: #BA7517; }
+
+.pill-offer        { color: #86efac; border-color: #1a3a0f; }
+.pill-offer.active { background: #639922; color: #fff; border-color: #639922; }
+
+.pill-rejected        { color: #fca5a5; border-color: #3f1010; }
+.pill-rejected.active { background: #E24B4A; color: #fff; border-color: #E24B4A; }
+
+/* ── Divider ── */
+.divider {
+  border: none;
+  border-top: 1px solid #374151;
+  margin: 1.25rem 0;
+}
+
+/* ── Submit button ── */
+.submit-btn {
+  width: 100%;
+  padding: 11px;
+  background: #378ADD;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.submit-btn:hover {
+  background: #185FA5;
+}
+
+/* ── Success message ── */
+.success-msg {
+  margin-top: 12px;
+  background: #14532d;
+  border: 1px solid #166534;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #86efac;
+  text-align: center;
+}
+
+
+/* ── Register extra styles ── */
+.error-msg {
+  margin-top: 10px;
+  background: #450a0a;
+  border: 1px solid #7f1d1d;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #fca5a5;
+  text-align: center;
+}
+
+.login-link {
+  text-align: center;
+  font-size: 13px;
+  color: #9ca3af;
+  margin-top: 16px;
+}
+
+.login-link a {
+  color: #378ADD;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* ── Stats grid ── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.stat-card {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 10px;
+  padding: 14px;
+  text-align: center;
+}
+
+.stat-num {
+  font-size: 24px;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+.stat-lbl {
+  font-size: 12px;
+  color: #9ca3af;
+  margin-top: 3px;
+}
+
+/* ── Filter pills ── */
+.filter-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 700px;
+}
+
+.filter-pill {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  background: transparent;
+  border: 1px solid #374151;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filter-pill:hover {
+  border-color: #6b7280;
+  color: #f9fafb;
+}
+
+.filter-active {
+  background: #378ADD;
+  border-color: #378ADD;
+  color: #fff;
+}
+
+.filter-count {
+  background: rgba(255,255,255,0.2);
+  border-radius: 999px;
+  padding: 1px 7px;
+  font-size: 11px;
+}
+
+/* ── Jobs list ── */
+.jobs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.empty-state {
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+  padding: 2rem;
+  background: #1f2937;
+  border-radius: 10px;
+  border: 1px solid #374151;
+}
+
+/* ── Job card ── */
+.job-card {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transition: border-color 0.15s;
+}
+
+.job-card:hover {
+  border-color: #4b5563;
+}
+
+.job-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.job-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #1e3a5f;
+  color: #93c5fd;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.job-company {
+  font-size: 15px;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+.job-role {
+  font-size: 13px;
+  color: #9ca3af;
+  margin-top: 2px;
+}
+
+.job-date {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 3px;
+}
+
+/* ── Actions ── */
+.action-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.btn-edit {
+  padding: 5px 12px;
+  font-size: 12px;
+  background: transparent;
+  border: 1px solid #374151;
+  border-radius: 6px;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.btn-edit:hover {
+  border-color: #378ADD;
+  color: #378ADD;
+}
+
+.btn-delete {
+  padding: 5px 12px;
+  font-size: 12px;
+  background: transparent;
+  border: 1px solid #374151;
+  border-radius: 6px;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.btn-delete:hover {
+  border-color: #E24B4A;
+  color: #E24B4A;
+}
+
+/* ── Edit row ── */
+.edit-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-select {
+  padding: 5px 10px;
+  font-size: 13px;
+  background: #111827;
+  border: 1px solid #374151;
+  border-radius: 6px;
+  color: #f9fafb;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-save {
+  padding: 5px 12px;
+  font-size: 12px;
+  background: #378ADD;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-cancel {
+  padding: 5px 10px;
+  font-size: 12px;
+  background: transparent;
+  border: 1px solid #374151;
+  border-radius: 6px;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+
+
+.nav-greeting {
+  font-size: 14px;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.nav-logout {
+  color: #fca5a5;
+  border-color: #7f1d1d;
+}
+
+.nav-logout:hover {
+  color: #E24B4A;
+  border-color: #E24B4A;
+}
