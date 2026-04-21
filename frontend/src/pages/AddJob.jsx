@@ -21,7 +21,7 @@ function AddJob() {
       return;
     }
     await axios.post(
-      "http://localhost:5000/add-job",
+      "https://job-application-tracker-hilo.onrender.com",
       { company, role, status, date, link },
       { headers }
     );

@@ -20,7 +20,7 @@ function Register({ onRegister }) {
       setError("Password must be at least 6 characters.");
       return;
     }
-    await axios.post("http://localhost:5000/register", { name, email, password });
+    await axios.post("https://job-application-tracker-hilo.onrender.com/register", { name, email, password });
     setSuccess(true);
     setTimeout(() => onRegister(), 1500); // ← go to login after 1.5 seconds
   };

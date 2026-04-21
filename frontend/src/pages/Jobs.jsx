@@ -20,7 +20,7 @@ function Jobs() {
   const headers = { Authorization: `Bearer ${token}` };
 
   const fetchJobs = async () => {
-    const res = await axios.get("http://localhost:5000/jobs", { headers });
+    const res = await axios.get("https://job-application-tracker-hilo.onrender.com", { headers });
     setJobs(res.data);
   };
 
@@ -28,12 +28,12 @@ function Jobs() {
 
   const handleDelete = async (id) => {
     if (!window.confirm("Delete this job?")) return;
-    await axios.delete(`http://localhost:5000/jobs/${id}`, { headers });
+    await axios.delete(`https://job-application-tracker-hilo.onrender.com/jobs/${id}`, { headers });
     fetchJobs();
   };
 
   const handleEditSave = async (id) => {
-    await axios.put(`http://localhost:5000/jobs/${id}`, { status: editStatus }, { headers });
+    await axios.put(`https://job-application-tracker-hilo.onrender.com/jobs/${id}`, { status: editStatus }, { headers });
     setEditingId(null);
     fetchJobs();
   };

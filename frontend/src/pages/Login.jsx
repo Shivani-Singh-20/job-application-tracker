@@ -10,7 +10,7 @@ function Login({ onLogin, onRegister }) {
     e.preventDefault();
     setError("");
     try {
-      const res = await axios.post("http://localhost:5000/login", { email, password });
+      const res = await axios.post("https://job-application-tracker-hilo.onrender.com/login", { email, password });
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("name", res.data.name);
       onLogin();
