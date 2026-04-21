@@ -20,7 +20,7 @@ function Jobs() {
   const headers = { Authorization: `Bearer ${token}` };
 
   const fetchJobs = async () => {
-    const res = await axios.get("https://job-application-tracker-hilo.onrender.com", { headers });
+    const res = await axios.get("https://job-application-tracker-hilo.onrender.com/jobs", { headers });
     setJobs(res.data);
   };
 
