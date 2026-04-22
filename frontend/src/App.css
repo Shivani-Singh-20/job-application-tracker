@@ -449,3 +449,90 @@ body {
   color: #E24B4A;
   border-color: #E24B4A;
 }
+
+/* ── Responsive Mobile Fix ── */
+@media (max-width: 600px) {
+
+  .nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0.75rem;
+    gap: 6px;
+  }
+
+  .nav-greeting {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+
+  .nav-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .page {
+    padding: 1rem 0.75rem;
+  }
+
+  .form-card {
+    width: 100%;
+    padding: 1.25rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+
+  .filter-row {
+    max-width: 100%;
+  }
+
+  .jobs-list {
+    max-width: 100%;
+  }
+
+  .job-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .job-right {
+    width: 100%;
+  }
+
+  .action-row {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .edit-row {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .status-select {
+    width: 100%;
+  }
+
+  .btn-save, .btn-cancel, .btn-edit, .btn-delete {
+    flex: 1;
+    text-align: center;
+  }
+
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .status-pills {
+    gap: 6px;
+  }
+
+  .pill {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
