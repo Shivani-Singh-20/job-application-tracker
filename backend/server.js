@@ -15,8 +15,8 @@ const app = express();
 
 // 4. Middlewares
 app.use(cors({
-  origin: "https://job-application-tracker-eight-psi.vercel.app",
-  credentials: true
+  origin: "*",
+  credentials: false
 }));
 app.use(express.json());
 
