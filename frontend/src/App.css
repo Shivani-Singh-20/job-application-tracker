@@ -518,7 +518,7 @@ body {
   .page {
     padding: 1rem 0.75rem;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .header {
