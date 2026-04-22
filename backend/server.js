@@ -14,7 +14,10 @@ const User = require("./models/User");
 const app = express();
 
 // 4. Middlewares
-app.use(cors());
+app.use(cors({
+  origin: "https://job-application-tracker-eight-psi.vercel.app",
+  credentials: true
+}));
 app.use(express.json());
 
 // 5. Test route
