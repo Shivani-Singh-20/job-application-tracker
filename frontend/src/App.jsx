@@ -24,7 +24,7 @@ function App() {
 
   if (!isLoggedIn) {
     return (
-      <div>
+      <div style={{ width: "100%", minHeight: "100vh", background: "#111827" }}>
         <div className="nav">
           <button className={`nav-btn ${page === "login" ? "nav-active" : ""}`} onClick={() => setPage("login")}>Login</button>
           <button className={`nav-btn ${page === "register" ? "nav-active" : ""}`} onClick={() => setPage("register")}>Register</button>
@@ -36,7 +36,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div style={{ width: "100%", minHeight: "100vh", background: "#111827" }}>
       <div className="nav">
         <span className="nav-greeting">Hi, {name}!</span>
         <button className={`nav-btn ${page === "jobs" ? "nav-active" : ""}`} onClick={() => setPage("jobs")}>My Applications</button>
