@@ -11,6 +11,54 @@ body {
   min-height: 100vh;
 }
 
+/* ── Nav ── */
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 1rem;
+  border-bottom: 1px solid #1f2937;
+}
+
+.nav-btn {
+  padding: 7px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  background: transparent;
+  border: 1px solid #374151;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.nav-btn:hover { color: #f9fafb; border-color: #6b7280; }
+
+.nav-active {
+  background: #378ADD;
+  border-color: #378ADD;
+  color: #fff;
+}
+
+.nav-greeting {
+  font-size: 14px;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.nav-logout {
+  color: #fca5a5;
+  border-color: #7f1d1d;
+}
+
+.nav-logout:hover {
+  color: #E24B4A;
+  border-color: #E24B4A;
+}
+
 /* ── Page layout ── */
 .page {
   display: flex;
@@ -19,11 +67,13 @@ body {
   padding: 2.5rem 1rem;
   gap: 1.5rem;
   min-height: 100vh;
+  width: 100%;
 }
 
 /* ── Header ── */
 .header {
   text-align: center;
+  width: 100%;
 }
 
 .header h1 {
@@ -159,8 +209,7 @@ body {
   text-align: center;
 }
 
-
-/* ── Register extra styles ── */
+/* ── Error message ── */
 .error-msg {
   margin-top: 10px;
   background: #450a0a;
@@ -188,8 +237,6 @@ body {
 .login-link a:hover {
   text-decoration: underline;
 }
-
-
 
 /* ── Stats grid ── */
 .stats-grid {
@@ -302,6 +349,7 @@ body {
   display: flex;
   align-items: center;
   gap: 14px;
+  min-width: 0;
 }
 
 .job-avatar {
@@ -316,6 +364,10 @@ body {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+}
+
+.job-info {
+  min-width: 0;
 }
 
 .job-company {
@@ -430,27 +482,7 @@ body {
   cursor: pointer;
 }
 
-
-
-.nav-greeting {
-  font-size: 14px;
-  color: #9ca3af;
-  display: flex;
-  align-items: center;
-  margin-right: 8px;
-}
-
-.nav-logout {
-  color: #fca5a5;
-  border-color: #7f1d1d;
-}
-
-.nav-logout:hover {
-  color: #E24B4A;
-  border-color: #E24B4A;
-}
-
-/* ── Responsive Mobile Fix ── */
+/* ── Mobile Responsive ── */
 @media (max-width: 600px) {
 
   .nav {
@@ -463,6 +495,8 @@ body {
   .nav-greeting {
     width: 100%;
     text-align: center;
+    justify-content: center;
+    margin-right: 0;
     margin-bottom: 4px;
   }
 
@@ -473,24 +507,39 @@ body {
 
   .page {
     padding: 1rem 0.75rem;
+    align-items: center;
+  }
+
+  .header {
+    width: 100%;
+    text-align: center;
+  }
+
+  .header h1 {
+    font-size: 20px;
   }
 
   .form-card {
     width: 100%;
+    max-width: 100%;
     padding: 1.25rem;
+    margin: 0;
   }
 
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
     max-width: 100%;
+    width: 100%;
   }
 
   .filter-row {
     max-width: 100%;
+    width: 100%;
   }
 
   .jobs-list {
     max-width: 100%;
+    width: 100%;
   }
 
   .job-card {
@@ -500,6 +549,10 @@ body {
     padding: 14px;
   }
 
+  .job-left {
+    width: 100%;
+  }
+
   .job-right {
     width: 100%;
   }
@@ -507,11 +560,13 @@ body {
   .action-row {
     flex-wrap: wrap;
     gap: 6px;
+    width: 100%;
   }
 
   .edit-row {
     flex-wrap: wrap;
     gap: 6px;
+    width: 100%;
   }
 
   .status-select {
@@ -521,10 +576,6 @@ body {
   .btn-save, .btn-cancel, .btn-edit, .btn-delete {
     flex: 1;
     text-align: center;
-  }
-
-  .header h1 {
-    font-size: 20px;
   }
 
   .status-pills {
